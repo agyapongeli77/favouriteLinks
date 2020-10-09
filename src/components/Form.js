@@ -12,6 +12,13 @@ class Form extends Component {
         /*
             TODO - Logic for changing state based on form changes
         */
+       const target =  event.target;
+       const value = target.value;
+       const name = target.name;
+       const url = target.url;
+       this.setState({
+            [name]: value, [url]: value}
+           );
     }
 
     onFormSubmit = (event) => {
@@ -21,6 +28,9 @@ class Form extends Component {
         /*
             TODO - Logic for calling props to handle submission and setting state changes
         */
+       this.setState({name:"", url:""});
+       this.props.handleSubmit(this.state);
+
 
     }
 

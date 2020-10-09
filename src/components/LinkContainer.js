@@ -1,6 +1,6 @@
 import React from 'react';
 // import Table from './Table';
-// import Form from './Form';
+import Form from './Form';
 
 class LinkContainer extends React.Component {
     constructor(props){
